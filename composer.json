@@ -1,0 +1,9 @@
+{
+  "autoload": {
+    "psr-4": {
+      "CMS1207\\": "vendor/CMS1207/core",
+      "app\\": "app"
+    }
+  },
+  "require": {}
+}
