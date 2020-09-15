@@ -11,6 +11,10 @@ class ComposerStaticInitd1768cc76776107296b14d6e39733b2d
         array (
             'app\\' => 4,
         ),
+        'R' => 
+        array (
+            'RedBeanPHP\\' => 11,
+        ),
         'C' => 
         array (
             'CMS1207\\' => 8,
@@ -21,6 +25,10 @@ class ComposerStaticInitd1768cc76776107296b14d6e39733b2d
         'app\\' => 
         array (
             0 => __DIR__ . '/../..' . '/app',
+        ),
+        'RedBeanPHP\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/gabordemooij/redbean/RedBeanPHP',
         ),
         'CMS1207\\' => 
         array (

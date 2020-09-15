@@ -15,10 +15,10 @@ class Registry
         self::$properties[$name] = $value;
     }
 
-    protected function getProperty($name)
+    public function getProperty($name)
     {
-        if(isset(self::$properties['name'])){
-            return self::$properties['name'];
+        if(isset(self::$properties[$name])){
+            return self::$properties[$name];
         }
         return null;
     }
