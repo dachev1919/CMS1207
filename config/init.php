@@ -8,7 +8,7 @@ define("CORE", ROOT.'/vendor/CMS1207/core');
 define("LIBS", ROOT.'/vendor/CMS1207/core/libs');
 define("CACHE", ROOT.'/tmp/cache');
 define("CONFIG", ROOT.'/config');
-define("LAYOUT", 'default');
+define("LAYOUT", 'dachev');
 
 $app_path = "http://{$_SERVER['HTTP_HOST']}{$_SERVER['PHP_SELF']}";
 $app_path = preg_replace("#[^/]+$#", '', $app_path);
