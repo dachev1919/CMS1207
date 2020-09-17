@@ -9,6 +9,9 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 <head>
     <?=$this->getMeta();?>
     <link href="css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
+    <link href="megamenu/css/ionicons.min.css" rel="stylesheet" type="text/css" media="all" />
+    <link href="megamenu/css/style.css" rel="stylesheet" type="text/css" media="all" />
+
     <!--Custom-Theme-files-->
     <!--theme-style-->
     <link href="css/style.css" rel="stylesheet" type="text/css" media="all" />
@@ -16,7 +19,6 @@ License URL: http://creativecommons.org/licenses/by/3.0/
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <!--start-menu-->
-    <link href="css/memenu.css" rel="stylesheet" type="text/css" media="all" />
 </head>
 <body>
 <!--top-header-->
@@ -26,10 +28,8 @@ License URL: http://creativecommons.org/licenses/by/3.0/
             <div class="col-md-6 top-header-left">
                 <div class="drop">
                     <div class="box">
-                        <select tabindex="4" class="dropdown drop">
-                            <option value="" class="label">Dollar :</option>
-                            <option value="1">Dollar</option>
-                            <option value="2">Euro</option>
+                        <select id="currency" tabindex="4" class="dropdown drop">
+                            <?php new \app\widgets\currency\Currency(); ?>
                         </select>
                     </div>
                     <div class="box1">
@@ -69,8 +69,18 @@ License URL: http://creativecommons.org/licenses/by/3.0/
     <div class="container">
         <div class="header">
             <div class="col-md-9 header-left">
-                <div class="top-nav">
-                    <ul class="memenu skyblue"><li class="active"><a href="index.html">Home</a></li>
+                <div class="menu-container" style="background-color: #fff;">
+                    <div class="menu" style="background-color: #fff;">
+                        <?php   new \app\widgets\menu\Menu([
+                            'tpl' => WWW . '/menu/menu.php',
+                            'attrs' => [
+                                    'style' => ''
+                            ]
+                        ]); ?>
+                    </div>
+                </div>
+                <!--<div class="top-nav">
+                     <ul class="memenu skyblue"><li class="active"><a href="index.html">Home</a></li>
                         <li class="grid"><a href="#">Men</a>
                             <div class="mepanel">
                                 <div class="row">
@@ -205,7 +215,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                         <li class="grid"><a href="contact.html">Contact</a>
                         </li>
                     </ul>
-                </div>
+                </div>-->
                 <div class="clearfix"> </div>
             </div>
             <div class="col-md-3 header-right">
@@ -315,6 +325,8 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 
     });
 </script>
+<script src="js/main.js"></script>
+<script src="megamenu/js/megamenu.js"></script>
 <!--End-slider-script-->
 </body>
 </html>

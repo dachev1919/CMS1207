@@ -4,12 +4,11 @@
 namespace CMS1207;
 
 
-class App
-{
+class App{
+
     public static $app;
 
-    public function __construct()
-    {
+    public function __construct(){
         $query = trim($_SERVER['QUERY_STRING'], '/');
         session_start();
         self::$app = Registry::instance();
@@ -18,12 +17,13 @@ class App
         Router::dispatch($query);
     }
 
-    public function getParams(){
-        $params = require_once CONFIG.'/params.php';
-        if (!empty($params)){
-            foreach ($params as $k => $v) {
+    protected function getParams(){
+        $params = require_once CONFIG . '/params.php';
+        if(!empty($params)){
+            foreach($params as $k => $v){
                 self::$app->setProperty($k, $v);
             }
         }
     }
+
 }

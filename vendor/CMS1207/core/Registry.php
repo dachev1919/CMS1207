@@ -4,28 +4,24 @@
 namespace CMS1207;
 
 
-class Registry
-{
+class Registry {
+
     use TSingletone;
 
-    public static $properties = [];
+    protected static $properties = [];
 
-    public function setProperty($name, $value)
-    {
+    public function setProperty($name, $value){
         self::$properties[$name] = $value;
     }
 
-    public function getProperty($name)
-    {
+    public function getProperty($name){
         if(isset(self::$properties[$name])){
             return self::$properties[$name];
         }
         return null;
     }
 
-    public function getProperties()
-    {
+    public function getProperties(){
         return self::$properties;
     }
-
 }
