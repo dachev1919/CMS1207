@@ -3,7 +3,7 @@
 
 namespace app\controllers;
 
-
+use app\models\Cart;
 use CMS1207\App;
 
 class CurrencyController extends AppController

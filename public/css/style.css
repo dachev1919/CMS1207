@@ -84,6 +84,25 @@ body a{
     float: right;
 }
 /*----*/
+.tt-menu{
+    background: white;
+    border: 1px solid silver;
+    width: 100%;
+    opacity: 0.8;
+    cursor: pointer;
+}
+.tt-suggestion{
+    padding-bottom: 10px;
+    padding-left: 10px;
+}
+.tt-suggestion:hover{
+    opacity: 0.9;
+    border: 1px solid silver;
+}
+.tt-suggestion:last-child{
+    padding-bottom: 0px;
+
+}
 .itemContainer{
 			width:100%;
 			float:left;
@@ -1680,7 +1699,6 @@ a.add-cart {
     padding: 0.4em 0.8em;
     font-size: 1.15em;
     text-transform: uppercase;
-    margin-top: 2em;
     display: inline-block;
 }
 a.add-cart:hover {
@@ -1871,6 +1889,15 @@ h3.ghj {
 }
 .register{
 	padding:6em 0px;
+}
+
+.quantity{
+	margin-top: 10px;
+	display: flex;
+}
+.quantity input{
+	width: 40px;
+	margin-right: 10px;
 }
 /*--end-register--*/
 /*--media-quaries-starts-here--*/
